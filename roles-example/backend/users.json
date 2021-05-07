@@ -1,0 +1,22 @@
+{
+  "accounts": [
+    {
+      "username": "Ada",
+      "password": "pwd123",
+      "firstname": "Ada",
+      "lastname": "Lovelace",
+      "email": "ada@lovelace.com",
+      "id": "7bjcQ4yznubHX-mcu26F0",
+      "role": "user"
+    },
+    {
+      "username": "Chris",
+      "password": "pwd123",
+      "firstname": "Christoffer",
+      "lastname": "Wallenberg",
+      "email": "chris@wallenberg.com",
+      "role": "admin",
+      "id": "fRQTbdaNhbz0KFjbRd2Zf"
+    }
+  ]
+}
