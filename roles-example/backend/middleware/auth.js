@@ -1,13 +1,10 @@
-const lowdb = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
-const adapter = new FileSync('users.json');
-const database = lowdb(adapter);
+const { getUserById } = require('../database/operations');
 
 function admin(request, response, next) {
   const loggedInId = request.cookies.loggedIn;
   console.log('admin cookies', loggedInId);
   try {
-    const user = database.get('accounts').find({ id: loggedInId }).value();
+    const user = getUserById(loggedInId);
     console.log('admin middleware', user);
     if (!user) {
       throw new Error(); //Kommer istället att hoppa in i catchen nedan

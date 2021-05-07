@@ -16,6 +16,10 @@ async function getUserInfo() {
   console.log(data);
   nameElem.innerHTML = `${data.user.firstname} ${data.user.lastname}`;
   emailElem.innerHTML = data.user.email;
+
+  if (data.user.role === 'admin') {
+    getAllUsers();
+  }
 }
 
 async function isLoggedIn() {
@@ -24,7 +28,6 @@ async function isLoggedIn() {
 
   if (data.loggedIn) {
     getUserInfo();
-    getAllUsers();
   } else {
     location.href = 'http://localhost:8000/';
   }
